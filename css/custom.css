@@ -1,6 +1,6 @@
 :root {
   /* Colours */
-  --primary-bg-color: #fceb94; /* used */
+  --primary-bg-color: light-dark(#fceb94, #007bff); /* used */
 
   --primary-font-color: #000; /* used */
 
