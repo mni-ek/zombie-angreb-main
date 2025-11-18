@@ -107,34 +107,44 @@ p {
 }
 
 /* Styling the dialog element */
-dialog {
-  border: none;
-  border-radius: var(--border-radius);
-  background-color: var(--form-background-color);
-  color: var(--form-text-color);
-  /* box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3); */
-  /* filter: drop-shadow(0px 0px 10px rgba(243, 61, 0, 1)); */
-  /* border: 3px solid rgba(243, 61, 0, 1); */
-  padding: 2rem;
-  margin: minmax(1rem, auto);
-  width: clamp(30ch, 80%, 600px);
-  animation: flyIn 0.5s ease-in-out;
-  overflow: auto;
-  overscroll-behavior: contain;
-}
+[popover] {
+  padding: 1rem;
+  max-height: 90vh;
+  max-width: 70ch;
+  width: 90vw;
+  opacity: 0;
+  scale: 0.5;
+  /* rotate: 360deg; */
+  border-color: gold;
+  transition: 1s allow-discrete;
+  margin: auto;
 
-dialog h4 {
-  margin: 1.5rem 0 1rem 0;
-  font-size: var(--headline3-size);
-}
-dialog form {
-  margin: 0 1rem 2rem 0;
-}
-dialog img {
-  width: 40%;
-  float: left;
-  margin-right: 0.5rem;
-  padding-bottom: 0.5rem;
+  button {
+    position: sticky;
+    top: 0;
+    justify-self: end;
+  }
+
+  &:popover-open {
+    display: grid;
+    margin: auto;
+    border-color: blueviolet;
+    opacity: 1;
+    scale: 1;
+    /* rotate: none; */
+    padding: 1rem;
+    @starting-style {
+      opacity: 0;
+      scale: 0.5;
+      /* rotate: 360deg; */
+      border-color: gold;
+    }
+  }
+
+  &::backdrop {
+    background: #0008;
+    pointer-events: none;
+  }
 }
 
 /* Buttons */

@@ -42,24 +42,6 @@
       </article>
       <h3>Indberet Zombie-observation</h3>
       <form id="webform">
-        <!-- Hvornår -->
-        <!-- <fieldset id="when">
-            <legend>Hvornår?</legend>
-            <div class="form-group">
-              <p>Finder observationen sted lige nu?</p>
-              <input type="radio" id="today-yes" name="is-it-today" value="yes" required />
-              <label for="today-yes">Ja</label>
-              <input type="radio" id="today-no" name="is-it-today" value="no" required />
-              <label for="today-no">Nej</label>
-            </div>
-            <div id="date-field" class="form-group" style="display: none">
-              <p>Udfyld venligst dato og klokkeslet for observationen</p>
-              <label for="observation-date">Dato</label>
-              <input type="date" id="observation-date" name="observation-date" />
-              <label for="observation-time">Tid</label>
-              <input type="time" id="observation-time" name="observation-time" />
-            </div>
-          </fieldset> -->
         <!-- Hvor -->
         <fieldset id="where">
           <legend>Hvor?</legend>
@@ -88,7 +70,7 @@
         <!-- Hvad - type og antal -->
         <fieldset id="what">
           <legend>Hvad?</legend>
-          <div class="formcontainer">
+          <div>
             <div class="form-group">
               <label for="zombie-type">Hvilken slags Zombie så du?</label>
               <select name="zombie-type" id="zombie-type">
@@ -99,9 +81,13 @@
                 <option value="Influencer-zombie">Influencer-Zombie</option>
                 <option value="Mutations-zombie">Mutations-Zombie (Radioaktiv)</option>
                 <option value="Kendis-zombie">Kendis-Zombie</option>
+                <option value="Ukendt-zombie">Ukendt-Zombie</option>
               </select>
             </div>
-            <div id="zombie-info"></div>
+            <div class="form-group ukendt">
+              <label class="blok" for="ukendt">Navn på den nye Zombie</label>
+              <input type="text" id="ukendt" name="ukendt">
+            </div>
           </div>
         </fieldset>
         <!-- amount -->
