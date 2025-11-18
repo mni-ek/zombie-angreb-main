@@ -1,10 +1,10 @@
 :root {
   /* Colours */
-  --primary-bg-color: #fceb94; /* used */
+  --primary-bg-color: light-dark(#fceb94, #007bff); /* used */
 
   --primary-font-color: #000; /* used */
 
-  --secondary-bg-color: #5d656c; /* used */
+  --secondary-bg-color: #0088ff68; /* used */
   --secondary-font-color: #d5e5f4; /* used */
 
   /* CAN BE DELETED WHEN THE PLACEHOLDER CLASS IS DELETED */
