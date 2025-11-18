@@ -3,7 +3,7 @@ const btn = document.querySelector("#theme-btn");
 
 if (localStorage.getItem("darkmode")) {
   html.classList.toggle("dark");
-  btn.textContent = "Light";
+  btn.textContent = "light";
 }
 
 function toggleTheme() {
